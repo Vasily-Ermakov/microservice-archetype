@@ -4,12 +4,23 @@
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                       xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
                       name="${artifactId}">
-  <fileSets>
-    <fileSet filtered="true" packaged="true">
-      <directory>src/main/java</directory>
-    </fileSet>
-    <fileSet filtered="true" packaged="true">
-      <directory>src/test/java</directory>
-    </fileSet>
-  </fileSets>
+  <modules>
+    <module id="${rootArtifactId}-api" dir="__rootArtifactId__-api" name="${rootArtifactId}-api">
+      <fileSets>
+        <fileSet filtered="true" packaged="true">
+          <directory>src/main/java</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-service" dir="__rootArtifactId__-service" name="${rootArtifactId}-service">
+      <fileSets>
+        <fileSet filtered="true" packaged="true">
+          <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+          <directory>src/test/java</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+  </modules>
 </archetype-descriptor>
