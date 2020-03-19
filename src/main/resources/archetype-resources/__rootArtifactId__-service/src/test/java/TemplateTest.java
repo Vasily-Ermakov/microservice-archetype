@@ -6,5 +6,6 @@ public class TemplateTest {
 
   @Test
   void test() {
+    new Template();
   }
 }
