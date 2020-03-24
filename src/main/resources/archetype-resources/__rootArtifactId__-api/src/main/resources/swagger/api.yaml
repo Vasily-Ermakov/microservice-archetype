@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: API
+  version: 1.0.0
+paths:
+  /template:
+    get:
+      operationId: getTemplate
+      responses:
+        200:
+          description: GET
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Template'
+components:
+  schemas:
+    Template:
+      type: object
+      properties:
+        name:
+          type: string
