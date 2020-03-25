@@ -5,6 +5,8 @@ info:
 paths:
   /template:
     get:
+      tags:
+      - TemplateResource
       operationId: getTemplate
       responses:
         200:
