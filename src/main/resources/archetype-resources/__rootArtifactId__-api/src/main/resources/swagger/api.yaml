@@ -15,6 +15,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Template'
+  /templates/{id}:
+    get:
+      tags:
+        - TemplatesResource
+      operationId: getTemplateById
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        200:
+          description: GET
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Template'
 components:
   schemas:
     Template:

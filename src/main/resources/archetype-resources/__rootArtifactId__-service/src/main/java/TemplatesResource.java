@@ -11,14 +11,24 @@ import java.util.Optional;
 public class TemplatesResource implements TemplatesResourceApi {
 
   private final TemplatesResourceClient client;
+  private final EntityRepository repository;
 
-  public TemplatesResource(TemplatesResourceClient client) {
+  public TemplatesResource(TemplatesResourceClient client, EntityRepository repository) {
     this.client = client;
+    this.repository = repository;
   }
 
   @Override
   public ResponseEntity<Template> getTemplate() {
     client.getTemplate();
     return ResponseEntity.of(Optional.of(new Template()));
+  }
+
+  @Override
+  public ResponseEntity<Template> getTemplateById(Long id) {
+    return ResponseEntity.of(
+            repository
+                    .findById(id)
+                    .map(entity -> new Template().name(entity.getName())));
   }
 }
