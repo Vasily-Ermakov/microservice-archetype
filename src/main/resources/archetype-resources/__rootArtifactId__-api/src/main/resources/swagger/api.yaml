@@ -6,19 +6,21 @@ paths:
   /templates:
     get:
       tags:
-      - TemplatesResource
+      - TemplateResource
       operationId: getTemplate
       responses:
         200:
-          description: GET
+          description: Returns array of templates
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Template'
+                type: array
+                items:
+                  $ref: '#/components/schemas/Template'
   /templates/{id}:
     get:
       tags:
-        - TemplatesResource
+        - TemplateResource
       operationId: getTemplateById
       parameters:
         - in: path
@@ -27,10 +29,9 @@ paths:
           schema:
             type: integer
             format: int64
-            minimum: 1
       responses:
         200:
-          description: GET
+          description: Returns template by identifier
           content:
             application/json:
               schema:

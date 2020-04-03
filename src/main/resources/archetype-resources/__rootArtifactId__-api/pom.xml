@@ -8,7 +8,7 @@
     <groupId>${parentRootGroupId}</groupId>
     <artifactId>${parentRootArtifactId}-api</artifactId>
     <version>${parentRootVersion}</version>
-    <relativePath></relativePath>
+    <relativePath/>
   </parent>
 
   <groupId>${groupId}</groupId>

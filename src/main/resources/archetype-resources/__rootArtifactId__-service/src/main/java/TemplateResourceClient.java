@@ -2,8 +2,8 @@
 package $package;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import ${package}.api.TemplatesResourceApi;
+import ${package}.api.TemplateResourceApi;
 
 @FeignClient(name = "template", url = "${dollar}{feign.${rootArtifactId}-api.url}")
-public interface TemplatesResourceClient extends TemplatesResourceApi {
+public interface TemplateResourceClient extends TemplateResourceApi {
 }
