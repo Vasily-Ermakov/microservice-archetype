@@ -1,4 +1,4 @@
-#Architecture
+# Architecture
 Generates multi-module project.
 
 `api` module represents microservice interface. It is packaged into separate artifact allowing code reuse by dependent microservices.
@@ -7,19 +7,19 @@ Generates multi-module project.
 
 Both modules inherit corresponding POMs from a [parent](https://github.com/Vasily-Ermakov/microservice-parent-archetype).
 
-#Features
+# Features
 * Spring Web MVC
 * Spring Data JPA
 * Spring Cloud Config Client
 * Spring Cloud OpenFeign
 * JUnit 5
 
-#Properties
+# Properties
 * parentRootGroupId
 * parentRootArtifactId
 * parentRootVersion
 
-#Example of generation & running on local environment
+# Example of generation & running on local environment
 1. Install parent archetype
 
     Pull parent archetype [project](https://github.com/Vasily-Ermakov/microservice-parent-archetype).
