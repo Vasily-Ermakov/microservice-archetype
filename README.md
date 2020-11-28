@@ -12,6 +12,7 @@ Both modules inherit corresponding POMs from a [parent](https://github.com/Vasil
 * Spring Data JPA
 * Spring Cloud Config Client
 * Spring Cloud OpenFeign
+* Micrometre Application Monitoring & Prometheus
 * JUnit 5
 
 # Properties
