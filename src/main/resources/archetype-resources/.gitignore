@@ -1,0 +1,6 @@
+/.idea
+*.iml
+
+**/target/
+
+/${rootArtifactId}-api/src/main/java/
