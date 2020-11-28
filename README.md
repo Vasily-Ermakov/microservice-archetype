@@ -49,7 +49,7 @@ Both modules inherit corresponding POMs from a [parent](https://github.com/Vasil
     Generate from target directory or specify outputDirectory parameter.
     Replace {configurationRepositoryDirectory} with actual value.
     
-        mvn archetype:generate -DarchetypeGroupId=com.gmail.rec0rd.alterego -DarchetypeArtifactId=configuration-server-archetype -DarchetypeVersion=1.0.0-SNAPSHOT -DgroupId=csg -DartifactId=csa -Dversion=csv -DconfigServerGitUri=file://{configurationRepositoryDirectory}
+        mvn archetype:generate -DarchetypeGroupId=com.gmail.rec0rd.alterego -DarchetypeArtifactId=configuration-server-archetype -DarchetypeVersion=1.0.0-SNAPSHOT -DgroupId=csg -DartifactId=csa -Dversion=csv -Dpackage=csp -DconfigServerGitUri=file://{configurationRepositoryDirectory}
 7. Install configuration server
 
     Install from target directory.
