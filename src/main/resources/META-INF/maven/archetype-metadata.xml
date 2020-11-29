@@ -8,6 +8,7 @@
     <requiredProperty key="parentRootGroupId"/>
     <requiredProperty key="parentRootArtifactId"/>
     <requiredProperty key="parentRootVersion"/>
+    <requiredProperty key="gitUrl"/>
   </requiredProperties>
   
   <fileSets>
