@@ -8,6 +8,10 @@
   <artifactId>${artifactId}</artifactId>
   <version>${version}</version>
   <packaging>pom</packaging>
+         
+  <scm>
+    <developerConnection>scm:git:${gitUrl}</developerConnection>
+  </scm>
 
   <modules>
     <module>${rootArtifactId}-api</module>
