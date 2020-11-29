@@ -5,7 +5,7 @@ Generates multi-module project.
  
 `service` module represents microservice implementation.
 
-Both modules inherit corresponding POMs from a [parent](https://github.com/Vasily-Ermakov/microservice-parent-archetype).
+Root module and submodules inherit corresponding POMs from a [parent](https://github.com/Vasily-Ermakov/microservice-parent-archetype).
 
 # Features
 * Spring Web MVC
@@ -13,12 +13,14 @@ Both modules inherit corresponding POMs from a [parent](https://github.com/Vasil
 * Spring Cloud Config Client
 * Spring Cloud OpenFeign
 * Micrometre Application Monitoring & Prometheus
+* Artifact versioning
 * JUnit 5
 
 # Properties
 * parentRootGroupId
 * parentRootArtifactId
 * parentRootVersion
+* gitUrl
 
 # Example of generation & running on local environment
 1. Install parent archetype
@@ -32,7 +34,7 @@ Both modules inherit corresponding POMs from a [parent](https://github.com/Vasil
     Generate from target directory or specify outputDirectory parameter.
     Package parameter is irrelevant.
     
-        mvn archetype:generate -DarchetypeGroupId=com.gmail.rec0rd.alterego -DarchetypeArtifactId=microservice-parent-archetype -DarchetypeVersion=1.0.0-SNAPSHOT -DgroupId=g -DartifactId=a -Dversion=v -Dpackage=p
+        mvn archetype:generate -DarchetypeGroupId=com.gmail.rec0rd.alterego -DarchetypeArtifactId=microservice-parent-archetype -DarchetypeVersion=1.0.0-SNAPSHOT -DgroupId=g -DartifactId=a -Dversion=v -Dpackage=p -DgitUrl=url.git
 3. Install parent
     Install from target directory.
 4. Create configuration repository
@@ -60,7 +62,7 @@ Both modules inherit corresponding POMs from a [parent](https://github.com/Vasil
 
     Generate from target directory or specify outputDirectory parameter.
     
-        mvn archetype:generate -DarchetypeGroupId=com.gmail.rec0rd.alterego -DarchetypeArtifactId=microservice-archetype -DarchetypeVersion=1.0.0-SNAPSHOT -DgroupId=mg -DartifactId=ma -Dversion=mv -Dpackage=mp -DparentRootGroupId=g -DparentRootArtifactId=a -DparentRootVersion=v
+        mvn archetype:generate -DarchetypeGroupId=com.gmail.rec0rd.alterego -DarchetypeArtifactId=microservice-archetype -DarchetypeVersion=1.0.0-SNAPSHOT -DgroupId=mg -DartifactId=ma -Dversion=mv -Dpackage=mp -DparentRootGroupId=g -DparentRootArtifactId=a -DparentRootVersion=v -DgitUrl=url.git
 10. Fill microservice properties
 
     Copy /ma-service/src/main/resources/application.yaml to {configurationRepositoryDirectory}.
